@@ -141,7 +141,9 @@ def place_reflectors():
 numberOfBombs = 3
 points = 100
 while True:
+  os.system("cls")
   maze = [[" -","--","--","--","--","--","--","--","--","--","--","- "],
+  
         [" |","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","| "],
         [" |","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","| "],
         [" |","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","| "],
@@ -171,7 +173,7 @@ while True:
       maze[row][col] = "<>"
       i += 1
 
-  placeBombs(3)    
+  placeBombs(numberOfBombs)    
   drawMaze()    
   while True:
     y_or_n = input(f"would you like to buy a reflector for 20 points? you currently have {points} points. (y/n)").lower().strip()
@@ -188,4 +190,4 @@ while True:
   else:
     print("game over")
     break
-  numberOfBombs += 1
+  numberOfBombs += 2
